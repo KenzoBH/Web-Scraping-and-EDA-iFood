@@ -1,0 +1,106 @@
+,Restaurant,Rate,Type,Distance,Time,Freight Price
+0,Poke Garden - Tatuapé,4.8,Saudável,3.1,22-32 min,0.0
+1,Mussa Esfiha - Anália Franco,4.7,Árabe,2.1,21-31 min,7.99
+2,Pikurruchas Tatuapé,4.7,Doces & Bolos,2.3,24-34 min,6.99
+3,Let's Poke - Tatuapé,4.6,Japonesa,3.2,28-38 min,8.99
+4,Ragazzo - Radial,4.0,Salgados,4.4,48-58 min,8.9
+5,American Burger Delivery,4.7,Lanches,5.0,32-42 min,10.49
+6,Purana ZL,4.7,Saudável,5.0,42-52 min,12.49
+7,Eataly Restaurantes.,4.7,Italiana,8.2,36-46 min,19.99
+8,Andiamo Ristorante - Center Norte,4.7,Italiana,9.5,96-106 min,22.99
+9,Zé do Hamburger - Mooca,4.9,Lanches,5.0,35-45 min,11.49
+10,Sodiê Doces - São Paulo Vl. Matilde,4.8,Doces & Bolos,1.8,34-44 min,9.0
+11,Olive Garden - Shopping Aricanduva,4.6,Italiana,3.7,31-41 min,10.99
+12,Popeyes - Shopping Center Penha,4.7,Lanches,3.2,33-43 min,8.99
+13,Ligia Refeições Vila Matilde,4.6,Brasileira,2.3,60-70 min,0.0
+14,O Rei da Feijoada Tatuapé,4.5,Brasileira,2.4,50-60 min,7.0
+15,Mania de Churrasco - Anália Franco Shop,4.6,Brasileira,2.6,55-65 min,6.99
+16,Giraffas Carrefour Aricanduva,4.5,Brasileira,2.1,23-33 min,6.99
+17,X- Lanches Carrão,4.7,Lanches,0.6,35-45 min,0.0
+18,Sushi Garden One - Tatuapé,4.7,Japonesa,3.1,19-29 min,0.0
+19,Spoleto Penha Shopping,4.4,Italiana,3.2,33-43 min,7.99
+20,Outback Steakhouse - Anália Franco,4.7,Lanches,2.8,60-70 min,11.9
+21,Ideal Padaria,4.8,Padaria,1.8,23-33 min,4.99
+22,Golden Burger Aricanduva,4.4,Lanches,1.1,20-30 min,4.0
+23,Beco São Paulo,4.8,Variada,3.4,21-31 min,9.99
+24,Hamburgueria Corsário,4.8,Lanches,1.5,30-40 min,0.0
+25,Casa Napoles Padaria,4.7,Padaria,2.0,25-35 min,6.99
+26,Taco Bell - Shopping Anália Franco,4.6,Lanches,2.7,29-39 min,6.99
+27,Montana Grill - Analia Franco,4.4,Brasileira,2.8,39-49 min,7.99
+28,Croasonho - Anália Franco,4.5,Lanches,2.7,37-47 min,6.99
+29,Varandas Grill Marmitex,4.6,Brasileira,1.3,50-60 min,3.0
+30,Gendai Anália Franco,4.4,Japonesa,2.6,30-40 min,0.0
+31,República dos Camarões,4.8,Frutos Do Mar,2.5,60-70 min,6.0
+32,A Feijoada - Zona Leste,4.6,Brasileira,4.0,20-30 min,7.9
+33,Black Dog Tatuapé,4.4,Lanches,3.8,65-75 min,0.0
+34,Kazuya Sushi,4.6,Japonesa,0.3,20-30 min,0.0
+35,Coco Bambu - Anália Franco,4.4,Frutos Do Mar,2.2,55-65 min,0.0
+36,Marcão Grill Marmitex - Vila Matilde,4.7,Brasileira,1.3,50-60 min,3.0
+37,Redbone® Burger,4.7,Lanches,2.2,23-33 min,5.99
+38,Almanara Cozinha Árabe - Af,4.6,Árabe,2.9,37-47 min,8.99
+39,Pastel do Japa,4.7,Pastel,0.3,23-33 min,4.49
+40,Divina Panqueca - Tatuapé,4.7,Brasileira,2.9,30-40 min,6.99
+41,Açaí do Monge Jd Sta Maria,4.7,Açaí,2.8,39-49 min,0.0
+42,Tubarão do Açai Energy Food,4.8,Lanches,0.9,35-45 min,4.9
+43,Boizão Grill Analia Franco,4.6,Carnes,2.8,24-34 min,7.99
+44,Pecorino Trattoria - Tatuapé,4.8,Italiana,3.4,27-37 min,9.99
+45,Pecorino Trattoria - Tatuapé,4.8,Italiana,3.4,27-37 min,9.99
+46,Sushi Uau Delivery Food,4.5,Japonesa,1.8,40-50 min,0.0
+47,The Fifties - Shopping Anália Franco,4.3,Lanches,2.7,39-49 min,8.99
+48,Si Señor Tatuapé,4.7,Mexicana,3.3,35-45 min,9.99
+49,Jeronimo - Penha,4.5,Lanches,3.2,85-95 min,11.0
+50,Casa do Pastel Carrão - Delivery,4.8,Pastel,3.2,29-39 min,6.99
+51,Temakeria Paulista,4.8,Japonesa,3.3,26-36 min,9.99
+52,Carol Doces Gourmet,4.9,Doces & Bolos,0.8,25-35 min,0.0
+53,Restaurante Requinte,4.7,Brasileira,0.2,60-70 min,2.0
+54,Lanchonete Salsichão,4.9,Lanches,1.1,55-65 min,4.0
+55,Abbraccio - Anália Franco,4.7,Italiana,2.8,50-60 min,11.9
+56,Frutaria Pitaya,4.7,Saudável,3.8,45-55 min,4.9
+57,Esfiharia e Pizzaria Victoriana,4.4,Pizza,1.1,35-45 min,4.99
+58,Kibon Sorveteria - Tatuapé,4.9,Sorvetes,3.4,15-25 min,7.99
+59,Nine Nine Burger,4.9,Lanches,3.6,45-55 min,0.0
+60,Sushi Carrão,4.8,Japonesa,1.9,66-76 min,2.99
+61,La Fruta Açaí - Tatuapé,4.9,Açaí,3.5,24-34 min,6.99
+62,Bacio Di Latte: Gelato Puro - Tatuapé,4.8,Sorvetes,3.1,16-26 min,8.99
+63,Boi Gaúcho II,4.7,Brasileira,4.2,37-47 min,9.49
+64,Requinte Pães e Doces,4.8,Padaria,3.2,25-35 min,7.99
+65,Esquina do a Parmegiana,4.5,Brasileira,1.1,35-45 min,4.99
+66,Imperadores dos Salgados,4.8,Salgados,2.5,40-50 min,0.0
+67,Rei dos Donuts,4.8,Doces & Bolos,2.0,22-32 min,5.99
+68,Delifruit Sorvetes e Açaí,4.9,Açaí,2.2,16-26 min,5.99
+69,Fabrick Burger,4.7,Lanches,2.9,51-61 min,0.0
+70,Cão Veio Tatuapé,4.7,Lanches,3.1,27-37 min,9.99
+71,Just Burger Hamburgueria e Lanches,4.9,Lanches,5.3,45-55 min,11.0
+72,Renda de Açúcar,4.9,Doces & Bolos,3.1,28-38 min,7.99
+73,Fabrica de Bolo Vo Alzira - Vila Matilde,4.5,Doces & Bolos,1.9,14-24 min,4.99
+74,Gouveia Restaurante,4.4,Brasileira,2.5,59-69 min,2.99
+75,Magic Chicken Aricanduva,4.5,Variada,1.8,50-60 min,7.0
+76,Sopas e Feijoada em Casa,4.7,Sopas & Caldos,2.5,35-45 min,5.99
+77,Condimento,4.6,Brasileira,3.1,60-70 min,9.99
+78,Frutaria São Paulo - Tatuapé,4.6,Saudável,3.3,33-43 min,8.99
+79,Real Burger Tatuapé,4.8,Lanches,3.0,43-53 min,8.99
+80,Ayumi Sushi Prime,4.6,Japonesa,2.7,55-65 min,3.99
+81,Ponto da Esfiha Dona Matilde,4.5,Lanches,1.8,37-47 min,4.99
+82,Pastelaria Ki Delicia,4.7,Brasileira,3.3,60-70 min,7.0
+83,Croquet’s Salgados,4.8,Salgados,1.8,45-55 min,3.0
+84,Tijuco Esfiharia e Pizzaria,4.7,Pizza,3.9,55-65 min,4.0
+85,Padaria Casa Virginia Pães e Doces,4.9,Padaria,0.8,14-24 min,4.49
+86,Kauai Poke,4.8,Japonesa,3.9,22-32 min,10.99
+87,America - Anália Franco,4.4,Variada,2.8,36-46 min,8.99
+88,Rinconcito Peruano Tatuapé,4.7,Frutos Do Mar,3.6,23-33 min,10.49
+89,Pizza Crek - Tatuapé,4.5,Pizza,3.0,35-45 min,0.0
+90,Bolo da Madre - Tatuapé,4.8,Doces & Bolos,3.0,29-39 min,7.99
+91,Jeronimo - Shopping Anália Franco,4.2,Lanches,2.8,80-90 min,9.0
+92,Busger - Tatuapé,4.7,Lanches,2.4,21-31 min,8.99
+93,Padaria Nova Yara,4.7,Padaria,3.4,31-41 min,6.99
+94,Dr Hamburgueria,4.8,Lanches,2.4,35-45 min,0.0
+95,Padaria Charmosa da Vila Formosa,4.8,Padaria,2.3,18-28 min,5.99
+96,Applebee´s Tatuapé,4.4,Lanches,3.1,26-36 min,8.99
+97,Yakisoba da Penha,4.6,Chinesa,3.2,21-31 min,6.99
+98,Mineiro Delivery - SP Tatuapé,4.6,Brasileira,3.5,50-60 min,5.0
+99,Bob's - Shopping Aricanduva I,4.7,Lanches,3.5,30-40 min,8.49
+100,Açai do Monge Jd Ipanema,4.8,Açaí,4.0,40-50 min,5.0
+101,Brigadavó - Bolos e Brigadeiros,4.8,Doces & Bolos,3.0,45-55 min,0.0
+102,Sushi Anália Franco,4.6,Japonesa,2.0,45-55 min,0.0
+103,La Buena Onda,4.7,Mexicana,3.3,46-56 min,11.99
+104,Toku Sushi,4.4,Japonesa,1.8,39-49 min,5.0
