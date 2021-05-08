@@ -17,3 +17,6 @@ These are the first 5 rows of the data frame:
 |Mussa Esfiha - Anália Franco|4.7|Árabe|2.1|23-33 min|7.99|
 |Sassá Sushi - Tatuapé|4.4|Japonesa|3.8|41-51 min|10.49|
 |Meats - Anália Franco|4.7|Lanches|2.6|22-32 min|6.99|
+
+## [Cleaning Some Data](https://github.com/KenzoBH/Web-Scraping-and-EDA/blob/main/cleaning-data.ipynb)
+As this project was developed with the IME Jr. team, each member scraped its own data. This Jupyter Notebook (`.ipynb`) is about cleaning and joining 4 different dataframes from the team. The final file is [here](https://github.com/KenzoBH/Web-Scraping-and-EDA/blob/main/final-ifood-data.csv), (`final-ifood-data.csv`).
