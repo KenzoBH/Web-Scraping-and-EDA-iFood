@@ -5,7 +5,7 @@ It was developed with IME Jr. - Junior Enterprise from Maths and Statistics Inst
 
 ![](https://github.com/KenzoBH/Data-Science/blob/main/Images/ifood-image.jpg)
 
-## [The Web Scraper](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/web-scraper-ifood.py)
+## [The Web Scraper](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/web-scraper-ifood.py) (Python)
 The Web Scraper was developed in Python, using [Selenium](https://www.selenium.dev/) and [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html).   
 Was scraped data from +100 restaurants next to me, in a radius of 10km.    
 
@@ -21,8 +21,8 @@ These are the first 5 rows of the data frame:
 |Sassá Sushi - Tatuapé|4.4|Japonesa|3.8|41-51 min|10.49|
 |Meats - Anália Franco|4.7|Lanches|2.6|22-32 min|6.99|
 
-## [Cleaning Some Data](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/cleaning-data.ipynb)
+## [Cleaning Some Data](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/cleaning-data.ipynb) (Python)
 As this project was developed with the IME Jr. team, each member scraped its own data. This Jupyter Notebook (`.ipynb`) is about cleaning and joining 4 different dataframes from the team. The final file is [here](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/final-ifood-data.csv), (`final-ifood-data.csv`).
 
-## [Final EDA](https://kenzobh.github.io/projects/ifood-final-eda)
+## [Final EDA](https://kenzobh.github.io/projects/ifood-final-eda) (R)
 The final Exploratory Data Analysis is hosted on my website - here's the [link](https://kenzobh.github.io/projects/ifood-final-eda) -, and you can take a look at it. The files are [here](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/tree/main/ifood-eda), in this repo. It was developed in R Markdown, and in Portuguese, once it was developed with other people.
