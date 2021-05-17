@@ -1,16 +1,51 @@
 ---
 title: "Análise Exploratória de Dados: iFood"
 author: "Bruno Kenzo"
-date: "12/05/2021"
-output: 
+date: "`r format(Sys.time(), '%d de %B de %Y')`"
+output:
     html_document:
-        css: style.css
+        number_sections: yes
+        toc: yes
+        toc_float:
+            collapsed: yes
+            smooth_scroll: yes
 ---
 
 # iFood!
 
-Esta análise é uma continuação de um processo que envolveu a coleta de dados via Web Scraping [^1] e junção de outros conjuntos de dados coletados do [site do iFood](https://www.ifood.com.br/).    
-Você pode ver todo o processo no [meu repositório](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood) no Github   
+```{css, echo = FALSE}
+body {
+    font-family: 'Helvetica';
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat';
+    color: #EA1D2C;
+}
+
+a {
+    color: #EA1D2C;
+}
+
+a:focus, a:hover {
+    color: #EA1D2C;
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: white;
+    background-color: #EA1D2C;
+    border-color: #337ab7;
+}
+```
+
+Esta análise é uma continuação de um processo que envolveu a coleta de dados via Web Scraping[^1] e junção de outros conjuntos de dados coletados do [site do iFood](https://www.ifood.com.br/).    
+Você pode ver todo o processo no [meu repositório](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood) no GitHub.  
 - [Bruno Kenzo](https://kenzobh.github.io/).
 
 [^1]: Web Scraping, ou "Raspagem da Web", é o processo de coletar dados de sites da internet. Utilizei bibliotecas específicas para esse processo - Selenium - em linguagem Python e conhecimentos de HTML.
@@ -18,6 +53,8 @@ Você pode ver todo o processo no [meu repositório](https://github.com/KenzoBH/
 # Introdução
 
 Nessa análise exploratória de dados, irei explorar os dados coletados de `r nrow(read.csv('final-ifood-data.csv'))` restaurantes e alguns aspectos relacionados a eles na plataforma online da iFood.
+
+![](ifood-image.png)
 
 ## Importando pacotes e dados
 
@@ -29,14 +66,8 @@ library(knitr)      # Melhor visualização de tabelas em Rmd e HTML
 library(kableExtra) # Edição estética de tabelas
 ```
 
-Vou renomear algumas colunas para melhor interpretabilidade.
-
-
-Vamos ver as 10 primeiras linhas do conjunto de dados.
-
-```{R, include = FALSE}
-options(knitr.kable.NA = '')
-```
+Vou renomear algumas colunas para melhor interpretabilidade.  
+Esse é o nosso conjunto de dados:
 
 ```{R Importando os dados, message = FALSE}
 
@@ -44,11 +75,11 @@ df <- read_csv('final-ifood-data.csv') # Importação dos dados em .csv
 df <- rename(df, Restaurante = `Título`, Taxa = `Preço`, Coletor = Dono)
 # Renomeção de colunas para melhor interpretação
 
-df %>% 
-    head(10) %>% # Ver as 10 primeiras linhas
-    kable(caption = "Primeiras 10 linhas do conjunto de dados") %>%  # Melhor visualização
+df %>%
+    kable() %>%  # Melhor visualização
     kable_styling(full_width = FALSE, # Estéticas
-                  bootstrap_options = c('striped', 'hover', 'responsive'))
+                  bootstrap_options = c('striped', 'hover', 'responsive')) %>% 
+    scroll_box(width = '100%', height = '500px')
 ```
 
 Nosso dataframe possui `r nrow(df)` linhas e `r ncol(df)` colunas, as quais representam:
@@ -63,6 +94,8 @@ Nosso dataframe possui `r nrow(df)` linhas e `r ncol(df)` colunas, as quais repr
 Sobre as principais medidas estatísticas de cada coluna:
 
 ```{R, Estatísticas básicas}
+options(knitr.kable.NA = '')
+
 df %>% 
     summary() %>% # Principais medidas estatísticas
     kable() %>% 
@@ -106,7 +139,7 @@ red <- '#EA1D2C'
 black <- '#3F3E3E'
 grey <- '#F2F2F2'
 
-my_theme <- theme(plot.title = element_text(color = black, size = 25, face = 'bold'),
+my_theme <- theme(plot.title = element_text(color = black, size = 25, face = 'bold',),
                   plot.subtitle = element_text(color = black),
                   axis.title.x = element_text(color = red, face = 'bold'),
                   axis.title.y = element_text(color = black),
@@ -201,51 +234,66 @@ df %>%
     theme(plot.subtitle = element_text(color = red))
 ```
 
-Esperava que os restaurantes com menor taxa seriam melhores avaliados. Porém, como visto no gráfico de dispersão acima, não parece ter uma relação entre a taxa e a nota do restaurante.
+Esperava que os restaurantes com menor taxa seriam melhores avaliados. Porém, como visto no gráfico de dispersão acima, não parece ter uma relação entre a taxa e a nota do restaurante.  
+Há `r sum(df$Taxa == 0)` restaurantes que não cobram taxa dentre os `r dim(df)[1]`.
 
-```{R}
-sum(df$Taxa == 0)
-```
+Parece, portanto, que a taxa de frete não impacta a avaliação do restaurante.
 
-```{R}
+# Dos Tipos {.tabset}
+
+Vejamos a distribuição dos restaurantes agrupados por tipo de comida:
+
+## Desconsiderando notas 0
+```{R Sumário por tipos de restaurantes, message = FALSE}
 df %>% 
+    filter(Nota > 0) %>% 
     group_by(Tipo) %>% 
-    summarise(Quantidade = n(), `Preço Médio` = mean(Taxa),
+    summarise(Quantidade = n(), `Taxa Média` = mean(Taxa),
               `Nota Média` = mean(Nota)) %>% 
     arrange(desc(`Nota Média`)) %>% 
-    kable()
+    kable(caption = 'Restaurantes agrupados por tipo', 'html') %>% 
+    kable_styling(full_width = FALSE,
+                  bootstrap_options = c('striped', 'hover', 'responsive')) %>% 
+    scroll_box(width = '55%', height = '300px',
+               extra_css = 'margin-left: 50%; transform: translateX(-50%); ')
 ```
 
-```{R}
-tipos_mais_frequentes <- df %>% 
+Comidas coreanas se destacam dentre os tipos de comida - porém, se referem a apenas 2 restaurantes: `r select(filter(df, Tipo == 'Coreana'), Restaurante)[[1]]`. Destaque para Doces & Bolos, que possuem uma alta nota média com 9 restaurantes.
+
+## Considerando notas 0
+```{R Sumário por tipos de restaurantes considerando 0, message = FALSE}
+df %>% 
     group_by(Tipo) %>% 
-    summarise(Quantidade = n(), `Nota Média` = mean(Nota)) %>% 
-    filter(Quantidade > 5) %>% 
-    c()
-
-df %>% 
-    filter(Tipo %in% tipos_mais_frequentes[[1]]) %>% 
-    ggplot(aes(x = Tipo, y = Nota)) +
-    geom_boxplot()
+    summarise(Quantidade = n(), `Taxa Média` = mean(Taxa),
+              `Nota Média` = mean(Nota)) %>% 
+    arrange(desc(`Nota Média`)) %>% 
+    kable(caption = 'Restaurantes agrupados por tipo') %>% 
+    kable_styling(full_width = FALSE,
+                  bootstrap_options = c('striped', 'hover', 'responsive')) %>% 
+    scroll_box(width = '55%', height = '300px',
+               extra_css = 'margin-left: 50%; transform: translateX(-50%); ')
 ```
 
-```{R}
-df %>% 
-    filter(Tipo %in% tipos_mais_frequentes[[1]]) %>% 
-    ggplot(aes(x = Tipo, y = Taxa)) +
-    geom_boxplot()
-```
 
-```{R}
-getmode <- function(v) {
-    uniqv <- unique(v)
-    uniqv[which.max(tabulate(match(v, uniqv)))]
-}
-df %>% 
-    group_by(Coletor) %>% 
-    summarise('Quantidade de Restaurantes' = n(),
-              'Nota Média' = mean(Nota),
-              'Tipo Mais Frequente' = getmode(Tipo),
-              'Preço Médio' = mean(Taxa)) %>% 
-    kable()
-```
+Comidas coreanas se destacam dentre os tipos de comida - porém, se referem a apenas 2 restaurantes: `r select(filter(df, Tipo == 'Coreana'), Restaurante)[[1]]`. Destaque para Doces & Bolos, que possuem uma alta nota média com 9 restaurantes, e comida Brasileira, que possui 11 restaurantes com nota média de 3,27.
+
+# Conclusão
+
+Nota-se, portanto, que dos 118 estabelecimentos analisados, a maioria possui uma alta avaliação no site da plataforma. Porém, encontram-se alguns pontos isolados com notas abaixo do esperado - Jama Masjid com nota 3,2 e outros 11 restaurantes com nota 0, pois são novos no iFood.
+
+Os 2 melhores restaurantes dentro os coletados são Cacau Show - Carrefour Jacu Pessêgo e Jakes Food, com nota 5 - seria interessante coletar a quantidade de avaliações dos mesmos.
+
+Ademais, notou-se também que muitos restaurantes optam por não cobrar taxas de frete, o que não pareceu impactar na avaliação dos usuários. E destaque para os restaurantes de comida coreana, que obtiveram a maior média das avaliações no iFood (porém, com apenas 2 restaurantes).
+
+## Contato
+
+Veja todo o processo desse projeto [neste repositório](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood).  
+Para entrar em contato comigo, use qualquer um desses meios:
+
+[Website](https://kenzobh.github.io/)   
+Email: [brunokenzoh@usp.br](mailto:brunokenzoh@usp.br)  
+LinkedIn/[bruno-kenzo](https://www.linkedin.com/in/bruno-kenzo/)  
+GitHub/[KenzoBH](https://github.com/KenzoBH)
+
+Obrigado pela leitura! :D  
+- *Kenzo.*
