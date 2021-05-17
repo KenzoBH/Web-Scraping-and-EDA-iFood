@@ -24,5 +24,5 @@ These are the first 5 rows of the data frame:
 ## [Cleaning Some Data](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/cleaning-data.ipynb)
 As this project was developed with the IME Jr. team, each member scraped its own data. This Jupyter Notebook (`.ipynb`) is about cleaning and joining 4 different dataframes from the team. The final file is [here](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/final-ifood-data.csv), (`final-ifood-data.csv`).
 
-## [Final EDA](https://kenzobh.github.io/projects/ifood-final-eda) (in development)
+## [Final EDA](https://kenzobh.github.io/projects/ifood-final-eda)
 The final Exploratory Data Analysis is hosted on my website - here's the [link](https://kenzobh.github.io/projects/ifood-final-eda) -, and you can take a look at it. The files are [here](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/tree/main/ifood-eda), in this repo. It was developed in R Markdown, and in Portuguese, once it was developed with other people.
