@@ -27,7 +27,7 @@ time.sleep(3)
 
 # Clicks on "Ver mais restaurantes e mercados" button "n_scrolls" times
 # <button type="button" role="button" class="btn btn--default btn--white btn--size-m btn--full-width restaurants-list__load-more" aria-label="Ver mais restaurantes e mercados" color="white" variant="restaurants-list__load-more" theme="default" target="" rel="">
-for _ in range(n_scrolls): # Scrolls the page 5 times, to get more restaurants
+for _ in range(n_scrolls): # Scrolls the page 'n_scrolls' times, to get more restaurants
     browser.execute_script("window.scrollTo(0, document);")
     time.sleep(3)
     load_more_button = browser.find_element_by_xpath('//button[@class="btn btn--default btn--white btn--size-m btn--full-width restaurants-list__load-more"]')
