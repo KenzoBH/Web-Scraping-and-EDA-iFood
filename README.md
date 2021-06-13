@@ -9,6 +9,7 @@ You can see the project description - in portuguese - [here](https://kenzobh.git
 ## [The Web Scraper](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/web-scraper-ifood.py) (Python)
 The Web Scraper was developed in Python, using [Selenium](https://www.selenium.dev/) and [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html).   
 Was scraped data from +100 restaurants next to me, in a radius of 10km.    
+[![](https://github.com/KenzoBH/kenzobh.github.io/blob/main/images/ifood-website.gif)](https://www.ifood.com.br/lista-restaurantes)
 
 ## [The Scraped Data](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/scraped-data.csv)
 The scraped data from iFood website is stored in a `.csv` file. You can download it if you want. Or scrape some data yourself, with the [web scraper](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/web-scraper-ifood.py) above, inputing your data in the program, using your PC location.   
@@ -27,3 +28,4 @@ As this project was developed with the IME Jr. team, each member scraped its own
 
 ## [Final EDA](https://kenzobh.github.io/projects/ifood-final-eda) (R)
 The final Exploratory Data Analysis is hosted on my website - here's the [link](https://kenzobh.github.io/projects/ifood-final-eda) -, and you can take a look at it. The files are [here](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/tree/main/ifood-eda), in this repo. It was developed in R Markdown, and in Portuguese, once it was developed with other people.
+[![](https://github.com/KenzoBH/kenzobh.github.io/blob/main/images/ifood-final-eda.gif)](https://kenzobh.github.io/projects/ifood-final-eda)
