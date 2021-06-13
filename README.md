@@ -1,9 +1,10 @@
 <h1 align="center">iFood!</h1>
 
 This project is about collect data from [iFood website](https://www.ifood.com.br/lista-restaurantes) and explore it.   
-It was developed with IME Jr. - Junior Enterprise from Maths and Statistics Institute from University of São Paulo - team members.
+It was developed with IME Jr. - Junior Enterprise from Maths and Statistics Institute from University of São Paulo - team members.  
+You can see the project description - in portuguese - [here](https://kenzobh.github.io/projects/ifood.html), in my website.
 
-![](https://github.com/KenzoBH/Data-Science/blob/main/Images/ifood-image.jpg)
+[![](https://github.com/KenzoBH/Data-Science/blob/main/Images/ifood-image.jpg)](https://kenzobh.github.io/projects/ifood.html)
 
 ## [The Web Scraper](https://github.com/KenzoBH/Web-Scraping-and-EDA-iFood/blob/main/web-scraper-ifood.py) (Python)
 The Web Scraper was developed in Python, using [Selenium](https://www.selenium.dev/) and [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html).   
